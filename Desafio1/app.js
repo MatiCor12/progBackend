@@ -43,22 +43,33 @@ class ProductManager {
 }
 
 const productManager = new ProductManager()
+
+
 productManager.addProduct({
-    title: "Producto 1",
-    description: "El mejor producto",
+    title: "Teclado gamer",
+    description: "El mejor teclado de todos",
     price: 12,
     thumbnail: 'ruta/imagen1.jnp',
-    code: 'P001',
-    stock: 2,
+    code: '001',
+    stock: 5,
 })
 
 productManager.addProduct({
-    title: "Producto 2",
-    description: "El mejor producto",
-    price: 12,
+    title: "Mouse gamer",
+    description: "El mejor mouse de todos",
+    price: 9,
     thumbnail: 'ruta/imagen2.jnp',
-    code: 'P002',
-    stock: 2
+    code: '002',
+    stock: 10,
+})
+
+productManager.addProduct({
+    title: "Monitor 144hz",
+    description: "El mejor monitor",
+    price: 20,
+    thumbnail: 'ruta/imagen3.jnp',
+    code: '002',
+    stock: 4,
 })
 
 const productos = productManager.getProducts()
