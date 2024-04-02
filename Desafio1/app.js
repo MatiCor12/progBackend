@@ -5,11 +5,11 @@ class ProductManager {
     }
 
     addProduct(product){
-        if(!this.Valid(product)) {
+        if(!this.validateProduct(product)) {
             console.log("Error: el producto no es valido")
             return
         }
-        if(this.Duplicate(product.code)){
+        if(this.duplicateCode(product.code)){
             console.log("Error: el codigo ya esta en uso")
             return
         }
@@ -18,13 +18,13 @@ class ProductManager {
         this.products.push(product)
     }
 
-    Valid(product){
+    validateProduct(product){
         return(
             product.title && product.description && product.price && product.thumbnail && product.code && product.stock
         )
     }
 
-    Duplicate(code){
+    duplicateCode(code){
         return this.products.some((p) => p.code === code)
     }
 
@@ -33,12 +33,12 @@ class ProductManager {
     }
 
     getProductById(id) {
-        const productoEncontrado = this.products.find((p) => p.id === id)
-        if (!productoEncontrado) {
+        const foundProduct = this.products.find((p) => p.id === id)
+        if (!foundProduct) {
             console.log("error, Not found")
         return
     }
-    return productoEncontrado
+    return foundProduct
     }
 }
 
@@ -72,5 +72,5 @@ productManager.addProduct({
     stock: 4,
 })
 
-const productos = productManager.getProducts()
-console.log(productos)
+const testProducts = productManager.getProducts()
+console.log(testProducts)
