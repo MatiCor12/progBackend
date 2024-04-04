@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Auriculares Gmer",
+    "description": "Mejor auricular",
+    "price": 1200,
+    "thumbnail": "image1",
+    "code": "A002",
+    "stock": 10
+  },
+  {
+    "id": 3,
+    "title": "Monitor Gamer",
+    "description": "Mejor monitor 144hz",
+    "price": 2000,
+    "thumbnail": "image3",
+    "code": "C002",
+    "stock": 5
+  },
+  {
+    "id": 4,
+    "title": "Teclado gamer",
+    "description": "Mejor teclado",
+    "price": 1700,
+    "thumbnail": "image4",
+    "code": "D001",
+    "stock": 7
+  }
+]
