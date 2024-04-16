@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Auriculares Gamer",
+    "description": "Mejor auricular",
+    "price": 1000,
+    "thumbnail": "image1",
+    "code": "A001",
+    "stock": 25
+  },
+  {
+    "id": 2,
+    "title": "Mouse Gamer",
+    "description": "Mejor mouse",
+    "price": 1500,
+    "thumbnail": "image2",
+    "code": "B001",
+    "stock": 35
+  },
+  {
+    "id": 3,
+    "title": "Auriculares Gamer2",
+    "description": "Este es un Producto de Prueba6",
+    "price": 1100,
+    "thumbnail": "image6",
+    "code": "A002",
+    "stock": 35
+  },
+  {
+    "id": 4,
+    "title": "Mouse Gamer2",
+    "description": "Mejor mouse2",
+    "price": 1600,
+    "thumbnail": "image7",
+    "code": "B002",
+    "stock": 35
+  },
+  {
+    "id": 5,
+    "title": "Monitor Gamer2",
+    "description": "Mejor monitor 144hz2",
+    "price": 2100,
+    "thumbnail": "image8",
+    "code": "C002",
+    "stock": 35
+  },
+  {
+    "id": 6,
+    "title": "Teclado Gamer2",
+    "description": "Mejor teclado2",
+    "price": 1800,
+    "thumbnail": "image9",
+    "code": "D002",
+    "stock": 35
+  },
+  {
+    "id": 7,
+    "title": "Silla Gamer1",
+    "description": "Mejor silla",
+    "price": 1100,
+    "thumbnail": "image10",
+    "code": "E001",
+    "stock": 35
+  },
+  {
+    "id": 8,
+    "title": "Silla Gamer2",
+    "description": "Mejor silla2",
+    "price": 1200,
+    "thumbnail": "image11",
+    "code": "E002",
+    "stock": 35
+  }
+]
