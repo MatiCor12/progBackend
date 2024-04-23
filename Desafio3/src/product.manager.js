@@ -100,7 +100,7 @@ module.exports = ProductManager
 
 const manager = new ProductManager('./nuevos_productos.json')
 
-//Pruebas 
+//Pruebas
 const product1 = {title: 'Auriculares Gamer', description: 'Mejor auricular', price: 1000, thumbnail: 'image1',code: 'A001', stock: 25}
 
 const product2 = {title: 'Mouse Gamer', description: 'Mejor mouse', price: 1500, thumbnail: 'image2', code: 'B001', stock: 35}
