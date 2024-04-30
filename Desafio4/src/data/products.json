@@ -1,0 +1,46 @@
+[
+    {
+    "id": 1,
+    "title": "Auricular Gamer",
+    "description": "Mejor auricular",
+    "price": "1000",
+    "category": "Gamer",
+    "status": true,
+    "thumbnail": "https://images.fravega.com/f500/57e1403fe178abd9607293ff67e58704.jpg",
+    "code": "A001",
+    "stock": "15"
+    },
+    {
+    "id": 2,
+    "title": "Mouse Gamer",
+    "description": "Mejor mouse",
+    "price": "1500",
+    "category": "Gamer",
+    "status": true,
+    "thumbnail": "https://www.soscomputacion.com.ar/7313-thickbox_default/mouse-gamer-logitech-g-pro-gaming-con-cable-luz-led-rgb-12000-dpi.jpg",
+    "code": "B001",
+    "stock": "8"
+    },
+    {
+    "id": 3,
+    "title": "Monitor Gamer",
+    "description": "Mejor monitor 144hz",
+    "price": "2000",
+    "category": "Gamer",
+    "status": true,
+    "thumbnail": "https://mexx-img-2019.s3.amazonaws.com/monitor-gamer_41023_1.jpeg",
+    "code": "C001",
+    "stock": "5"
+    },
+    {
+    "id": 4,
+    "title": "Teclado Gamer",
+    "description": "Mejor teclado para jugar",
+    "price": "1800",
+    "category": "Gamer",
+    "status": true,
+    "thumbnail": "https://mexx-img-2019.s3.amazonaws.com/Teclado-Gamer-Redragon-K616-Fizz-Rgb-Pro-Blanco-Rosa_45907_1.jpeg",
+    "code": "D001",
+    "stock": "10"
+    }
+]

@@ -1,0 +1,58 @@
+<form class="row g-3 mx-4" id="formProduct">
+    <h2 class="mb-4">Real Time Products</h2>
+
+    <!-- Nombre del Producto -->
+        <label for="title" class="form-label">Nombre del Producto</label>
+            <input type="text" name="title" id="title" placeholder="Ej. Smartphone" required>
+
+    <!-- Descripción -->
+        <label for="description" class="form-label">Descripción</label>
+            <input type="text" name="description" id="description" placeholder="Ej. Último modelo con características avanzadas" required>
+
+
+    <!-- Stock -->
+        <label for="stock" class="form-label">Stock</label>
+            <input type="number" name="stock" id="stock" placeholder="Ej. 100" required>
+
+
+    <!-- Imagen (URL) -->
+        <label for="thumbnail" class="form-label">Imagen (URL)</label>
+
+
+            <input type="text" name="thumbnail" id="thumbnail" placeholder="Ej. https://example.com/image.jpg" required>
+
+
+    <!-- Categoría -->
+        <label for="category" class="form-label">Categoría</label>
+            <input type="text" name="category" id="category" placeholder="Ej. Electrónicos" required>
+
+
+    <!-- Precio -->
+        <label for="price" class="form-label">Precio</label>
+            <input type="number" name="price" id="price" placeholder="Ej. 499.99" required>
+
+    <!-- Estado (Checkbox) -->
+
+        <div class="form-check mt-4">
+            <input name="status" class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked>
+            <label for="flexCheckChecked">Estado</label>
+
+    <!-- Código -->
+        <label for="code" class="form-label">Código</label>
+        <input type="text" name="code" id="code" placeholder="Ej. ABC123" required>
+
+    <!-- Botón Registrar -->
+    <buttontype="submit" id="add-btn">Registrar </buttontype=>
+    <h2>Eliminar Producto:</h2>
+
+    <!-- ID del Producto a Eliminar -->
+
+        <label for="id-prod">ID del Producto</label>
+            <input type="number" name="id-prod" id="id-prod" placeholder="Ej. 123">
+
+    <!-- Botón Eliminar -->
+    <button type="button" id="delete-btn">Eliminar</button>
+
+</form>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realtime.js"></script>
