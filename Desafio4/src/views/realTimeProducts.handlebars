@@ -1,58 +1,45 @@
-<form class="row g-3 mx-4" id="formProduct">
-    <h2 class="mb-4">Real Time Products</h2>
+<form>
+    <h3>Real time products</h3>
+    <!-- Product name -->
+    <label for="title">Product name</label>
+    <input type="text" name="title" id="title" placeholder="Product" required>
 
-    <!-- Nombre del Producto -->
-        <label for="title" class="form-label">Nombre del Producto</label>
-            <input type="text" name="title" id="title" placeholder="Ej. Smartphone" required>
-
-    <!-- Descripción -->
-        <label for="description" class="form-label">Descripción</label>
-            <input type="text" name="description" id="description" placeholder="Ej. Último modelo con características avanzadas" required>
-
+    <!-- Description -->
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description" placeholder="Caracteristicas del producto" required>
 
     <!-- Stock -->
-        <label for="stock" class="form-label">Stock</label>
-            <input type="number" name="stock" id="stock" placeholder="Ej. 100" required>
+    <label for="stock">Stock</label>
+    <input type="number" name="stock" id="stock" placeholder="3" required>
 
+    <!-- Image(URL) -->
+    <label for="thumbnail">Image(URL)</label>
+    <input type="text" name="thumbnail" id="thumbnail" placeholder="https://example.com/image.jpg" required>
 
-    <!-- Imagen (URL) -->
-        <label for="thumbnail" class="form-label">Imagen (URL)</label>
+    <!-- Category -->
+    <label for="category">Category</label>
+    <input type="text" name="category" id="category" placeholder="Gamer" required>
 
+    <!-- Price -->
+    <label for="price" class="form-label">Price</label>
+    <input type="number" name="price" id="price" placeholder="1200" required>
 
-            <input type="text" name="thumbnail" id="thumbnail" placeholder="Ej. https://example.com/image.jpg" required>
+    <!-- Status-->
+    <input name="status" type="checkbox" value="true" id="flexCheckChecked" checked>
+    <label for="flexCheckChecked">Estado</label>
 
+    <!-- Button to register -->
+    <button type="submit" id="add-btn">To register</button>
 
-    <!-- Categoría -->
-        <label for="category" class="form-label">Categoría</label>
-            <input type="text" name="category" id="category" placeholder="Ej. Electrónicos" required>
-
-
-    <!-- Precio -->
-        <label for="price" class="form-label">Precio</label>
-            <input type="number" name="price" id="price" placeholder="Ej. 499.99" required>
-
-    <!-- Estado (Checkbox) -->
-
-        <div class="form-check mt-4">
-            <input name="status" class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked>
-            <label for="flexCheckChecked">Estado</label>
-
-    <!-- Código -->
-        <label for="code" class="form-label">Código</label>
-        <input type="text" name="code" id="code" placeholder="Ej. ABC123" required>
-
-    <!-- Botón Registrar -->
-    <buttontype="submit" id="add-btn">Registrar </buttontype=>
-    <h2>Eliminar Producto:</h2>
+    <!-- Delete product -->
+    <h4>Delete product:</h4>
 
     <!-- ID del Producto a Eliminar -->
-
-        <label for="id-prod">ID del Producto</label>
-            <input type="number" name="id-prod" id="id-prod" placeholder="Ej. 123">
+    <label for="id-prod">Product id</label>
+    <input type="number" name="id-prod" id="id-prod" placeholder="Product id">
 
     <!-- Botón Eliminar -->
-    <button type="button" id="delete-btn">Eliminar</button>
-
+    <button type="button" id="delete-btn">Delete</button>
 </form>
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/realtime.js"></script>

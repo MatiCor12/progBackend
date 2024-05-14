@@ -1,12 +1,10 @@
 const socketClient=io()
 
-socketClient.on("enviodeproducts",(obj)=>{
+socketClient.on("shippingofproducts",(obj)=>{
     updateProductList(obj)
 })
 
-
 function updateProductList(productList) {
-    const productsDiv  = document.getElementById('list-products')
     let productosHTML = "";
     productList.forEach((product) => {
         productosHTML += `code: ${product.code}
@@ -21,9 +19,7 @@ function updateProductList(productList) {
             </p>
         <button type="button"onclick="deleteProduct(${product.id})">Eliminar</button>`
     })
-    productsDiv .innerHTML = productosHTML
 }
-
 
 let form = document.getElementById("formProduct")
 form.addEventListener("submit", (evt) => {

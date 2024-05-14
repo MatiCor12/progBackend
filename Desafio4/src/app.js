@@ -2,7 +2,6 @@ import express from "express"
 import { __dirname } from "./utils.js"
 import handlebars from "express-handlebars"
 import {Server} from "socket.io"
-
 import productRoutes from "./routes/productRoutes.js"
 import viewsRoutes from "./routes/viewsRoutes.js"
 import socketProducts from "./listener/socketProducts.js"
@@ -32,8 +31,8 @@ app.use('/', viewsRoutes)
 
 const httpServer=app.listen(PORT, () => {
     try {
-        console.log(`Listening to the port ${PORT}\nAcceder a:`)
-        console.log(`\t1). http://localhost:${PORT}/api/products`)
+        console.log(`Acceder a:`)
+        console.log(`\thttp://localhost:${PORT}`)
     }
     catch (err) {
         console.log(err)
@@ -41,5 +40,4 @@ const httpServer=app.listen(PORT, () => {
 })
 
 const socketServer = new Server(httpServer)
-
 socketProducts(socketServer)
