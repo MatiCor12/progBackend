@@ -9,7 +9,8 @@ import __dirname from "./utils.js"
 import 'dotenv/config'
 import { dbConnection } from "./config/config.js"
 import MessageManager from './class/ChatManager.js'
-import { addProductModerate, getProductsModerate } from "./moderate/products.js"
+//import { addProductModerate, getProductsModerate } from "./moderate/products.js"
+import { ProductsRepository } from "./repositories/index.js"
 import session from 'express-session'
 import MongoStore from "connect-mongo"
 import passport from "passport"
@@ -63,12 +64,12 @@ const io = new Server(expressServer)
 
 io.on('connection', async(socket) => {
 
-    const {payload} = await getProductsModerate({})
+    const {payload} = await ProductsRepository.getProducts({})
     const productos = payload
     socket.emit('products', payload);
 
     socket.on('addProducto', async (product)=> {
-        const newProduct = await addProductModerate({...product});
+        const newProduct = await ProductsRepository.addProduct({...product});
         if(newProduct) {
             productos.push(newProduct)
             socket.emit('products', productos);
