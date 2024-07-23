@@ -1,7 +1,6 @@
 import passport from "passport";
 import local from 'passport-local'
 import GitHubStrategy from 'passport-github2'
-//import { getUserById, getUser, registerUser } from "../moderate/user.js"
 import { UsersRepository } from "../repositories/index.js"
 import { createHash, isValidPassword } from "../utils.js"
 
@@ -26,7 +25,6 @@ export const initializePassport = () => {
                 }
 
                 req.body.password = createHash(password)
-                //const newUser = await registerUser({ ...req.body })
                 const newUser = await UsersRepository.registerUser({ ...req.body })
 
                 if(newUser)
@@ -43,7 +41,6 @@ export const initializePassport = () => {
         {usernameField: 'email'},
         async (username, password, done) => {
             try{
-                //const user = await getUser(username)
                 const user = await UsersRepository.getUserByEmail(username)
 
                 if(!user){
@@ -81,7 +78,6 @@ export const initializePassport = () => {
             try{
                 console.log(profile)
                 const email = profile._json.email;
-                //const user = await getUser(email);
                 const user = await UsersRepository.getUserByEmail(email);
                 if(user)
                     return done(null, user);
@@ -92,7 +88,6 @@ export const initializePassport = () => {
                     image:profile._json.avatar_url,
                     github: true
                 };
-                //const result = await registerUser({ ...newUser });
                 const result = await UsersRepository.registerUser({ ...newUser });
                 return done(null, result);
             } catch (error) {

@@ -36,7 +36,6 @@ export const addProductViewPost= async (req = request, res = response) => {
 
 export const cartIdView = async (req = request, res = response) => {
     const {cid} = req.params
-    //const carrito = await getCartByIdModerate(cid);
     const carrito = await CartsRepository.getCartById(cid);
     const user =  req.session.user
     return res.render('cart', {title: 'carrito', carrito, user})
