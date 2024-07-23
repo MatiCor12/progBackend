@@ -1,7 +1,5 @@
 import { Schema, model } from "mongoose";
 
-//Nombre de la nueva coleccion
-
 const nameCollection = 'User'
 
 const UserSchema = new Schema ({
