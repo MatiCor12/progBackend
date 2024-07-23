@@ -3,7 +3,6 @@ import { ProductsRepository } from '../repositories/index.js';
 
 export const getProducts = async (req = request, res = response) => {
     try {
-        //const result = await getProductsModerate({...req.query})
         const result = await ProductsRepository.getProducts({ ...req.query })
         return res.json({ result })
     } catch (error) {
@@ -14,7 +13,6 @@ export const getProducts = async (req = request, res = response) => {
 export const getProductById = async (req = request, res = response) => {
     try {
         const {pid} = req.params;
-        //const product = await getProductByIdModerate(pid)
         const product = await ProductsRepository.getProductById(pid)
         if(!product)
             return res.status(404).json({ msg: `The product with id${pid} not found`})
@@ -33,7 +31,6 @@ export const addProduct = async (req = request, res = response) => {
         const existeCode = await ProductsRepository.getProductByCode(code)
         if(existeCode)
             return res.status(400).json({msg:'El codigo ingresado ya existe en un producto'})
-        //const product = await addProductModerate({...req.body})
         const product = await ProductsRepository.addProduct({ ...req.body })
         return res.json({ product })
     } catch (error) {
@@ -60,7 +57,6 @@ export const updateProduct = async (req = request, res = response) => {
 export const deleteProduct = async (req = request, res = response) => {
     try {
         const {pid} = req.params
-        //const product = await deleteProductModerate(pid)
         const product = await ProductsRepository.deleteProduct(pid)
         if(product)
             return res.json({msg:'Removed product', product})

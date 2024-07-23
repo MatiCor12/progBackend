@@ -9,7 +9,6 @@ import __dirname from "./utils.js"
 import 'dotenv/config'
 import { dbConnection } from "./config/config.js"
 import MessageManager from './class/ChatManager.js'
-//import { addProductModerate, getProductsModerate } from "./moderate/products.js"
 import { ProductsRepository } from "./repositories/index.js"
 import session from 'express-session'
 import MongoStore from "connect-mongo"
