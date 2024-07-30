@@ -1,11 +1,11 @@
 import express from 'express'
-import session from 'express-session'
-import MongoStore from 'connect-mongo'
+//import session from 'express-session'
+//import MongoStore from 'connect-mongo'
 import 'dotenv/config'
 
 import productRoutes from "./routes/productRoutes.js"
 import { errorHandler } from "./middlewares/errorHandler.js"
-import { dbConnection } from "./config/config.js"
+//import { dbConnection } from "./config/config.js"
 
 import logger from "./config/logger.js"
 import loggerTestRoutes from "./routes/loggerTest.js"
@@ -13,7 +13,6 @@ import mongoose from 'mongoose'
 
 //Nombramos la variable app con la función de expres
 const app = express();
-//Definimos el puerto
 
 //Definimos los middlewares
 app.use(express.json());
