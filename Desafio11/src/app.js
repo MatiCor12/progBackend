@@ -5,6 +5,9 @@ import passport from 'passport';
 import bodyParser from 'body-parser';
 import 'dotenv/config';
 import { Server } from 'socket.io';
+import swaggerUiExpress from 'swagger-ui-express';
+import swaggerJsDoc from 'swagger-jsdoc';
+
 import productRoutes from './routes/productRoutes.js';
 import cartRoutes from './routes/cartRoutes.js';
 import viewsRoutes from './routes/viewsRoutes.js';
@@ -15,9 +18,6 @@ import { dbConnection } from './config/config.js';
 import { initializePassport } from './config/passport.js';
 import { socketProducts } from './listener/socketProducts.js';
 import { socketChat }from './listener/socketChat.js';
-
-import swaggerUiExpress from 'swagger-ui-express';
-import swaggerJsDoc from 'swagger-jsdoc';
 
 //Base de datos conectamos
 await dbConnection();

@@ -142,7 +142,7 @@ export const changeRole = async (req, res) => {
             console.log('User not found');
             return res.status(404).json({ error: 'User not founde' });
         }
-        
+
         if (role === 'premium') {
             user.role = 'premium';
         } else if (role === 'user') {

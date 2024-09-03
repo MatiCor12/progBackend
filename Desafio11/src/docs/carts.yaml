@@ -153,23 +153,6 @@ paths:
       summary: Recibo de compra
       tags:
         - Carts
-      parameters:
-        - in: path
-          name: cid
-          required: true
-          schema:
-            type: string
-          description: ID del carrito
-        requestBody:
-          required: true
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  email:
-                    type: string
-                    description: Email para recibir notificaciones
       responses:
         '200':
           description: Recibo de compra
